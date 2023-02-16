@@ -2,9 +2,9 @@ pipeline {
     agent { 
     	dockerfile {
 		filename ''
-		dir '003 - Defining Execution Environments/02 - Dockerfile - Dockerfile Agent'
-		label ''
-		additional BuildArgs ´´
+		dir '02 - Dockerfile - Dockerfile Agent'
+		label '003 - Defining Execution Environments'
+		additionalBuildArgs ´´
 	}
     stages {
         stage('build') {
