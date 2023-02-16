@@ -7,8 +7,14 @@ pipeline {
 	
 	environment {
 		BUILD_CONFIGS = '''
-		[{name:"Java", command: "echo 'Java command!'"},
-		{name:"Node", command: "echo 'Node command!'"}]
+		[	{
+			name:"Java",
+			command: "echo 'Java command!'"
+			},
+			{
+			name:"Node",
+			command: "echo 'Node command!'"
+			}]
 		'''
 	}
 	
