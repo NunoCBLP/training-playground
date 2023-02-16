@@ -6,9 +6,10 @@ pipeline {
 	}
 	
 	environment {
-		BUILD_CONFIGS = 'test'
+		BUILD_CONFIGS = '''
 		[{name:"Java", command: "echo 'Java command!'"},
 		{name:"Node", command: "echo 'Node command!'"}]
+		'''
 	
 	stages {
 		stage('build') {
