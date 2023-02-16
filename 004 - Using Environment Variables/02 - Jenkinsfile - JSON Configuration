@@ -10,6 +10,7 @@ pipeline {
 		[{name:"Java", command: "echo 'Java command!'"},
 		{name:"Node", command: "echo 'Node command!'"}]
 		'''
+	}
 	
 	stages {
 		stage('build') {
