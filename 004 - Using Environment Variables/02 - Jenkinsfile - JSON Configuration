@@ -7,19 +7,13 @@ pipeline {
 	
 	environment {
 		BUILD_CONFIGS = 'test'
-		[{
-			name:"Java",
-			command: "echo 'Java command!'"
-		},	{
-			name:"Node",
-			command: "echo 'Node command!'"
-	}
+		[{name:"Java", command: "echo 'Java command!'"},{name:"Node",command: "echo 'Node command!'"}]
 	
 	stages {
 		stage('build') {
 		    steps {
 			script {
-				def buildConfigs = [test]
+				def buildConfigs = [BUILD_CONFIGS]
 				buildConfigs.each{ buildConfig ->
 					sh "echo '$buildConfig.name' && $buildConfig.command"
 						}
