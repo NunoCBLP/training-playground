@@ -11,12 +11,13 @@ pipeline {
 			steps{
 				script{
 					NUMBER_OF_ISSUES = 0
-				}
+					}
 			}
 		}
+	
 		stage('Notification') {
 			echo 'issues $NUMBER_OF_ISSUES = 10'
 		}
     	
-    }
+    	}
 }
