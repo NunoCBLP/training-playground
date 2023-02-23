@@ -1,13 +1,13 @@
 pipeline {
     agent { 
 		docker { 
-			image 'alpine:latest' 
+			image 'maven:latest' 
 		}
 	}
     stages {
         stage('tests') {
             steps {
-                sh ""
+                sh "mvn -f 02 -Jenkinsfile"
             }
         }
     }
