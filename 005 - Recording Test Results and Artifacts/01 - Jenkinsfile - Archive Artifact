@@ -4,11 +4,18 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+	
     stages {
         stage('build') {
             steps {
-                sh "curl www.google.com"
+                sh "curl www.google.com > googlePage.html "
+		
             }
         }
+    }
+    post {
+    	always {
+		archiveArtifacts artifacts:
+	}
     }
 }
