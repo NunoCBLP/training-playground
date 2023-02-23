@@ -1,9 +1,22 @@
 pipeline {
-    agent { 
+	agent { 
 		docker { 
 			image 'alpine:latest' 
 		}
 	}
-    stages {
+
+	
+	stages {
+		stage('Test') {
+			steps{
+				script{
+					NUMBER_OF_ISSUES = 0
+				}
+			}
+		}
+		stage('Notification') {
+			echo 'issues $NUMBER_OF_ISSUES = 10'
+		}
+    	
     }
 }
