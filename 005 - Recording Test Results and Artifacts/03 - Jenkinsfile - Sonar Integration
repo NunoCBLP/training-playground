@@ -8,8 +8,8 @@ pipeline {
         stage('tests') {
             steps {
 	    	script {
-			sh 'mvn -f "005 - Recording Test Results and Artifacts/02 - Java Unit Tests/' compile'
-			sh 'mvn clear verify sonar:sonar -Dsonar.host.url=http://3.124.164.63:8081/about'
+			sh 'mvn -f "005 - Recording Test Results and Artifacts/03 - Sonar Integration/" compile'
+			sh 'mvn clear verify sonar:sonar -Dsonar.host.url=http://3.124.164.63:8081/'
 		}
             }
         }
