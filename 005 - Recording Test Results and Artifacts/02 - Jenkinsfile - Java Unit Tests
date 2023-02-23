@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('tests') {
             steps {
-                sh "mvn -f 02 -Jenkinsfile"
+                sh "mvn -f '02 -Jenkinsfile'"
             }
         }
     }
