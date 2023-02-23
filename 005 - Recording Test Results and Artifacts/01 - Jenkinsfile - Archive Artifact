@@ -16,7 +16,7 @@ pipeline {
     }
         post {
     	always {
-		archiveArtifacts artifacts: '/var/jenkins_home/workspace/usr8_workspace/Terceiro dia/Ex1/googlePage.html'
+		archiveArtifacts artifacts: 'googlePage.html'
 	}
     }
 
