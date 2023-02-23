@@ -8,8 +8,13 @@ pipeline {
         stage('build') {
             steps {
                 scripts {
-                	def buildConfigs = []
+                	def buildConfigs = readJSON text: '[{"name":"namejava", "command":"echo \'command]
                 	buildConfigs.each{ buildConfig ->
+				stage('buildConfig.name'({
+					steps{ 
+						buildConfig.name 
+					}
+				}
                 		sh "echo '$buildConfig.name' && $buildConfig.command"
 					}
                 }
