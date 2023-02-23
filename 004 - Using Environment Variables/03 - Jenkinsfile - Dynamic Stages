@@ -12,7 +12,8 @@ pipeline {
                 	buildConfigs.each{ buildConfig ->
 				stage(buildConfig.name){
 					sh "echo buildConfig.name && echo ola && echo 12345"
-					}
+				}
+			}
                 }
             }
         }
